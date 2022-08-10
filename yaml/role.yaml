@@ -43,6 +43,8 @@ rules:
   - pods
   - services
   - configmaps
+  - persistentvolumes
+  - persistentvolumeclaims
   verbs:
   - create
   - delete
@@ -75,3 +77,15 @@ rules:
   - patch
   - update
   - watch
+- apiGroups:
+    - "policy"
+  resources:
+    - poddisruptionbudgets
+  verbs:
+    - create
+    - delete
+    - get
+    - list
+    - patch
+    - update
+    - watch
