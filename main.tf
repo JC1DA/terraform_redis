@@ -46,7 +46,7 @@ resource "azurerm_kubernetes_cluster" "demo" {
     name                = "cpupool1"
     enable_auto_scaling = true
     vm_size             = "Standard_D2s_v3"
-    min_count           = local.use_cluster ? 6 : 1 # minimum 6 nodes for 3 masters and 3 replicas if using in cluster mode
+    min_count           = local.use_cluster ? 6 : 1 # minimum 6 nodes for 3 leaders and 3 followers if in cluster mode
     max_count           = 10
   }
 
