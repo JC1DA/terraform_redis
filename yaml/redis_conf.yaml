@@ -6,3 +6,5 @@ metadata:
 data:
   redis-external.conf: |
     requirepass ${REDIS_PASSWORD}
+    save ""
+    appendonly no
