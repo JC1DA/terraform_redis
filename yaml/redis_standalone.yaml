@@ -4,6 +4,8 @@ metadata:
   name: redis-standalone
   namespace: ot-operators
 spec:
+  redisConfig:
+    additionalRedisConfig: redis-external-config
   kubernetesConfig:
     image: quay.io/opstree/redis:v6.2.5
     imagePullPolicy: IfNotPresent
