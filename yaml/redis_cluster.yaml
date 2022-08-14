@@ -23,4 +23,10 @@ spec:
     resources:
       requests:
         cpu: 100m
-        memory: 128Mi      
+        memory: 128Mi
+  redisLeader:
+    redisConfig:
+      additionalRedisConfig: redis-external-config
+  redisFollower:
+    redisConfig:
+      additionalRedisConfig: redis-external-config
